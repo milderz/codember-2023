@@ -1,10 +1,12 @@
-const getChallengeData = async () => {
-  const res = await fetch("https://codember.dev/data/message_01.txt");
-  const data = await res.text();
-  return data;
-};
+// const getChallengeData = async () => {
+//   const res = await fetch("https://codember.dev/data/message_01.txt");
+//   const data = await res.text();
+//   return data;
+// };
 
-const data = getChallengeData();
+const data = fetch("https://codember.dev/data/message_01.txt")
+  .then((res) => res.text())
+  .then((data) => data);
 
 const countWords = async (text) => {
   const wordsCount = {};
