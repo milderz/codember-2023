@@ -12,7 +12,6 @@ const data = getChallengeData();
 
 const countWords = async (text) => {
   const wordsCount = {};
-  f;
   const string = await text;
   const result = [];
 
